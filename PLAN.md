@@ -78,7 +78,7 @@ Kombinasi font minimalis: Sans Serif dan Serif. Variasikan weight (Bold/Black/Li
 ### PAGE 1: `/login` (Autentikasi Admin)
 * **Desain Komponen**: Rounded box (lebar identik dengan panel admin).
 * **Isi**: Header "login panel" (Big text head), Kolom input PIN dengan error state, Tombol lebar "Masuk" aksen Gold (Middle text knob).
-* **Konfigurasi Auth**: Password default adalah `9900` (disimpan di `.env` dan sistem tabel config Supabase). Gunakan session authentication.
+* **Konfigurasi Auth**: Password diatur lewat `ADMIN_PIN` di environment, tidak pernah di-commit. Gunakan session authentication.
 * **Footer**: Terdapat credit footer paling bawah.
 
 ### PAGE 2: `/admin` (Administrator Panel)

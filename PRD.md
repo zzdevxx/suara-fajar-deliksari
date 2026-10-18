@@ -102,7 +102,7 @@ flowchart TB
 
 ### B. Studio Penyiar & Dashboard Admin (`/admin` & `/operator`)
 1. **Autentikasi & Proteksi Keamanan (`/login`)**:
-   - PIN Access Gate (`ADMIN_PIN`, default `9900`) dengan session cookie terenkripsi (`ADMIN_SESSION_SECRET`).
+   - PIN Access Gate (`ADMIN_PIN`, wajib diatur lewat environment) dengan session cookie terenkripsi (`ADMIN_SESSION_SECRET`).
 2. **Studio Mikrofon Penyiar (LiveKit Publisher)**:
    - Tombol mikrofon On-Air / Mic Off berukuran besar dengan visualizer level suara.
    - Izin mikrofon browser otomatis dan indikator kualitas koneksi.

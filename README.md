@@ -16,7 +16,7 @@
 | Layanan | Tautan Akses | Keterangan |
 | :--- | :--- | :--- |
 | 🎧 **Portal Pendengar (Jemaat)** | [**`https://suara-fajar-deliksari.vercel.app`**](https://suara-fajar-deliksari.vercel.app) | Siaran audio live fajar, Dinding Doa, Reaksi Iman, Rundown |
-| 🎙️ **Studio Operator & Admin** | [**`https://suara-fajar-deliksari.vercel.app/login`**](https://suara-fajar-deliksari.vercel.app/login) | Broadcaster Mic On-Air, Moderasi Doa Jemaat *(PIN Default: `9900`)* |
+| 🎙️ **Studio Operator & Admin** | [**`https://suara-fajar-deliksari.vercel.app/login`**](https://suara-fajar-deliksari.vercel.app/login) | Broadcaster Mic On-Air, Moderasi Doa Jemaat *(PIN diatur lewat `ADMIN_PIN`, lihat `.env.example`)* |
 | 📁 **GitHub Repository** | [**`https://github.com/zzdree/suara-fajar-deliksari`**](https://github.com/zzdree/suara-fajar-deliksari) | Source code, arsitektur, dan pelacakan versi |
 
 ---
@@ -93,7 +93,7 @@ SUPABASE_SERVICE_ROLE_KEY=your_supabase_service_role_key
 
 # App & Auth
 NEXT_PUBLIC_ROOM_NAME=suara-fajar-deliksari
-ADMIN_PIN=9900
+ADMIN_PIN=choose_a_strong_pin
 ADMIN_SESSION_SECRET=your_secret_key_string
 ```
 
