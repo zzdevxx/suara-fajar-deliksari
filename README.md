@@ -17,7 +17,7 @@
 | :--- | :--- | :--- |
 | 🎧 **Portal Pendengar (Jemaat)** | [**`https://suara-fajar-deliksari.vercel.app`**](https://suara-fajar-deliksari.vercel.app) | Siaran audio live fajar, Dinding Doa, Reaksi Iman, Rundown |
 | 🎙️ **Studio Operator & Admin** | [**`https://suara-fajar-deliksari.vercel.app/login`**](https://suara-fajar-deliksari.vercel.app/login) | Broadcaster Mic On-Air, Moderasi Doa Jemaat *(PIN diatur lewat `ADMIN_PIN`, lihat `.env.example`)* |
-| 📁 **GitHub Repository** | [**`https://github.com/zzdree/suara-fajar-deliksari`**](https://gitlab.com/zzdree/suara-fajar-deliksari) | Source code, arsitektur, dan pelacakan versi |
+| 📁 **Repository** | [**`https://gitlab.com/zzdree/suara-fajar-deliksari`**](https://gitlab.com/zzdree/suara-fajar-deliksari) | Source code, arsitektur, dan pelacakan versi |
 
 ---
 
