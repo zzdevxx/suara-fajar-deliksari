@@ -17,7 +17,7 @@
 | :--- | :--- | :--- |
 | 🎧 **Portal Pendengar (Jemaat)** | [**`https://suara-fajar-deliksari.vercel.app`**](https://suara-fajar-deliksari.vercel.app) | Siaran audio live fajar, Dinding Doa, Reaksi Iman, Rundown |
 | 🎙️ **Studio Operator & Admin** | [**`https://suara-fajar-deliksari.vercel.app/login`**](https://suara-fajar-deliksari.vercel.app/login) | Broadcaster Mic On-Air, Moderasi Doa Jemaat *(PIN diatur lewat `ADMIN_PIN`, lihat `.env.example`)* |
-| 📁 **Repository** | [**`https://gitlab.com/zzdree/suara-fajar-deliksari`**](https://gitlab.com/zzdree/suara-fajar-deliksari) | Source code, arsitektur, dan pelacakan versi |
+| 📁 **Repository** | [**`https://gitlab.com/zzdevxx/suara-fajar-deliksari`**](https://gitlab.com/zzdevxx/suara-fajar-deliksari) | Source code, arsitektur, dan pelacakan versi |
 
 ---
 
@@ -64,7 +64,7 @@
 
 ### 1. Clone Repositori
 ```bash
-git clone https://gitlab.com/zzdree/suara-fajar-deliksari.git
+git clone https://gitlab.com/zzdevxx/suara-fajar-deliksari.git
 cd suara-fajar-deliksari
 ```
 
@@ -120,7 +120,7 @@ Proyek ini telah dikonfigurasi untuk auto-deploy di **Vercel**:
 
 ## 👨‍💻 Kontributor
 
-- **Andreas Restuawanta Christwara** ([@zzdree](https://github.com/zzdevxx))
+- **Andreas Restuawanta Christwara** ([@zzdevxx](https://github.com/zzdevxx))
 - **Multimedia & Broadcast Ministry GIA Deliksari Semarang**
 
 ---
