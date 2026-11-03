@@ -1,4 +1,4 @@
-# 📻 Suara Fajar Deliksari — Live Audio Streaming Radio & Komunitas Doa Pagi
+﻿# 📻 Suara Fajar Deliksari — Live Audio Streaming Radio & Komunitas Doa Pagi
 
 > Platform Web Live-Streaming Audio WebRTC untuk siaran Radio Doa Pagi Gereja (**Gereja Isa Almasih Deliksari Semarang**) dengan latensi ultra-rendah (<500ms) dan fitur interaktif real-time (Dinding Doa, Reaksi Iman, dan Studio Mikrofon Penyiar).
 
@@ -120,7 +120,7 @@ Proyek ini telah dikonfigurasi untuk auto-deploy di **Vercel**:
 
 ## 👨‍💻 Kontributor
 
-- **Andreas Restuawanta Christwara** ([@zzdree](https://github.com/zzdree))
+- **Andreas Restuawanta Christwara** ([@zzdree](https://github.com/zzdevxx))
 - **Multimedia & Broadcast Ministry GIA Deliksari Semarang**
 
 ---
