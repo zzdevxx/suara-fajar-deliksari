@@ -15,11 +15,10 @@ export function AudioVisualizer20({
 }: AudioVisualizer20Props) {
   const [realLevels, setRealLevels] = useState<number[]>([]);
 
+  const isIdle = !isActive || !analyser;
+
   useEffect(() => {
-    if (!isActive || !analyser) {
-      setRealLevels([]);
-      return;
-    }
+    if (isIdle) return;
 
     let animationFrameId: number;
     const bufferLength = analyser.frequencyBinCount;
@@ -44,9 +43,12 @@ export function AudioVisualizer20({
     return () => {
       if (animationFrameId) cancelAnimationFrame(animationFrameId);
     };
-  }, [isActive, analyser, barCount]);
+  }, [isIdle, isActive, analyser, barCount]);
 
-  const hasRealLevels = realLevels.length === barCount && realLevels.some((v) => v > 0.05);
+  const hasRealLevels =
+    !isIdle &&
+    realLevels.length === barCount &&
+    realLevels.some((v) => v > 0.05);
 
   const bars = Array.from({ length: barCount }, (_, i) => {
     const centerDist = Math.abs(i - barCount / 2) / (barCount / 2);

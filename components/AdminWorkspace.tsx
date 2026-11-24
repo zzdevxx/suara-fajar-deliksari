@@ -142,8 +142,19 @@ export default function AdminWorkspace() {
         if (data) setSetlist(data as SetlistItem[]);
       });
 
-    // Prompt for media permissions and enumerate devices
-    requestHardwarePermissions();
+    // Media permission probing is user-gesture driven (browser requirement); enumerate
+    // whatever devices are already visible without claiming microphone/camera access.
+    if (typeof navigator !== 'undefined' && navigator.mediaDevices?.enumerateDevices) {
+      navigator.mediaDevices
+        .enumerateDevices()
+        .then((devices) => {
+          setMediaDevices({
+            audio: devices.filter((d) => d.kind === 'audioinput'),
+            video: devices.filter((d) => d.kind === 'videoinput'),
+          });
+        })
+        .catch((err) => console.warn('Failed to enumerate devices:', err));
+    }
 
     // Connect to LiveKit Room as operator publisher
     const connectLiveKitPublisher = async () => {
@@ -246,7 +257,7 @@ export default function AdminWorkspace() {
         audioContextRef.current.close();
       }
     };
-  }, [requestHardwarePermissions]);
+  }, [refreshDevices]);
 
   // Update AppState Helper
   const updateState = async (patch: Partial<AppState>) => {

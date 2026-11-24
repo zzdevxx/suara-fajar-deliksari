@@ -1,8 +1,62 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Background maroon stages */
+  --color-maroon-50: #fdecec;
+  --color-maroon-100: #fbcaca;
+  --color-maroon-200: #f49595;
+  --color-maroon-300: #e25f5f;
+  --color-maroon-400: #c43434;
+  --color-maroon-500: #9b1b1b;
+  --color-maroon-600: #7e1010;
+  --color-maroon-700: #690a0a;
+  --color-maroon-800: #4d0707;
+  --color-maroon-900: #330303;
+
+  /* Aksen Gold */
+  --color-gold-50: #fff8db;
+  --color-gold-100: #ffeaa6;
+  --color-gold-200: #ffd770;
+  --color-gold-300: #f7c23a;
+  --color-gold-400: #e0a91d;
+  --color-gold-500: #b8870a;
+  --color-gold-600: #8a6308;
+  --color-gold-700: #5e4305;
+
+  /* Aksen Hijau */
+  --color-green-300: #7be39a;
+  --color-green-400: #3dd17a;
+  --color-green-500: #1aa860;
+  --color-green-600: #0e7a47;
+  --color-green-700: #08512f;
+
+  /* Aksen Biru */
+  --color-blue-300: #86c5ff;
+  --color-blue-400: #3d9eff;
+  --color-blue-500: #1a76e0;
+  --color-blue-600: #0e54a8;
+  --color-blue-700: #093670;
+
+  /* Aksen Ungu */
+  --color-purple-300: #c8a5ff;
+  --color-purple-400: #a374ff;
+  --color-purple-500: #7a47e0;
+  --color-purple-600: #5a2eb3;
+  --color-purple-700: #3a1b75;
+
+  --color-background: #210707;
+  --color-foreground: #ffffff;
+  --color-dark-gray: #0a0a0a;
+  --color-mid-gray: #1a1a1a;
+
+  --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
 
 @layer base {
   html {
@@ -13,7 +67,7 @@
   body {
     @apply text-slate-100 antialiased font-sans bg-[#0c080a] min-h-screen selection:bg-amber-500/30 selection:text-amber-200;
     /* 4-stage maroon radial gradient (0%, 25%, 50%, 75%) as specified in PLAN.md */
-    background-image: 
+    background-image:
       radial-gradient(ellipse 100% 70% at 50% 0%, rgba(136, 19, 55, 0.75) 0%, rgba(88, 12, 35, 0.50) 25%, rgba(45, 6, 18, 0.25) 50%, transparent 75%),
       radial-gradient(circle at 15% 30%, rgba(245, 158, 11, 0.12), transparent 45%),
       radial-gradient(circle at 85% 75%, rgba(159, 18, 57, 0.35), transparent 55%),
@@ -33,7 +87,7 @@
   }
 
   .glass-card-hover {
-    @apply glass-card hover:border-white/20 hover:bg-white/[0.08] hover:shadow-black/60 hover:-translate-y-0.5;
+    @apply relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.02] backdrop-blur-xl shadow-xl shadow-black/40 transition-all duration-300 hover:border-white/20 hover:bg-white/[0.08] hover:shadow-black/60 hover:-translate-y-0.5;
   }
 
   .glass-panel {
@@ -68,7 +122,7 @@
   /* ==========================================================================
      Button Color System (from PLAN.md Section 3.B)
      ========================================================================== */
-  
+
   /* 1. Accent Primary (Gold: Base 100%, Middle 67%, Dark 33% with dark text) */
   .btn-gold {
     @apply relative inline-flex items-center justify-center gap-2 rounded-xl border border-amber-300/20 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 px-5 py-3 font-sans text-sm font-bold text-amber-950 shadow-lg shadow-amber-500/20 transition-all duration-200 hover:border-amber-300/40 hover:brightness-110 hover:shadow-amber-500/30 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50;
@@ -195,7 +249,7 @@ input[type='range'].dawn-slider::-webkit-slider-thumb:hover {
   100% {
     opacity: 0;
     transform: translateX(15px);
-    clip-path: inset(0 0% 0 100%);
+    clip-path: inset(0 0 0 100%);
   }
 }
 
